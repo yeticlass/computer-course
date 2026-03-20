@@ -1,18 +1,16 @@
-const  Main= () => {
-  return (
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+const App = () => {
+  return ( 
     <>
-    <h1 className="text-red-500">test!</h1>
-    <section>
-
-
-    <button className="
-    bg-slate-300 px-2 
-    hover:bg-amber-300
-    hover:cursor-pointer
-    rounded-md">OK</button>
-    </section>
+    Main Page
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+    </Routes>
+    </BrowserRouter>
     </>
-    );
+   );
 }
  
-export default Main;
+export default App;
